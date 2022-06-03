@@ -1,6 +1,7 @@
 package tests.day16_notations;
 
 import org.testng.annotations.Test;
+import utilities.Driver;
 import utilities.TestBase;
 
 import static org.testng.TestRunner.PriorityWeight.priority;
@@ -17,6 +18,8 @@ public class C03_Priority extends TestBase {
         egeri sifir olarak kabul edilir
      */
 
+
+
     @Test (priority = -5)
     public void amazonTesti() {
         driver.get("https://www.amazon.com");
@@ -28,7 +31,7 @@ public class C03_Priority extends TestBase {
         System.out.println(driver.getCurrentUrl());
     }
 
-    @Test
+    @Test(groups = "grup1")
     public void techproedTesti() {
         driver.get("https://www.techproeducation.com");
         System.out.println(driver.getCurrentUrl());
